@@ -1,0 +1,52 @@
+{
+  "name": "iteratio-plugin-memory",
+  "version": "0.1.0",
+  "description": "Memory integration plugin for iteratio (integrates with prefrontal)",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "iteratio",
+    "iteratio-plugin",
+    "memory",
+    "prefrontal"
+  ],
+  "author": "Rob Truitt",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rjtruitt/iteratio-plugin-memory.git"
+  },
+  "dependencies": {
+    "zod": "^3.0.0"
+  },
+  "peerDependencies": {
+    "iteratio": "^0.1.0",
+    "prefrontal": "^0.1.0",
+    "zod": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.19.41",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.6"
+  }
+}
